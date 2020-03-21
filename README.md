@@ -6,5 +6,5 @@ In this application customers can manage subscribtion on services, streaming ser
 
 ## You can see Prototype site here:
 https://www.figma.com/file/c7wAeGUFL2vONwdl3rDUra/Untitled?node-id=0%3A1
-I work with him, and everything can change at any time
- 	(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+### I work with him, and everything can change at any time
+### (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
