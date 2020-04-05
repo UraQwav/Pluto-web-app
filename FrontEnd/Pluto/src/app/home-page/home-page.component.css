@@ -1,0 +1,111 @@
+.home-page{
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.home-page-animation{
+    display: flex;
+    justify-content: space-around;
+    width:97vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 20vh;
+}
+@keyframes textAnimation{
+    0%{
+        margin-right: 250vw;
+    }
+    60%{
+        margin-right:0vw;
+    }
+    100%{
+        margin-right: 15vw;
+    }
+}
+@keyframes visableimg{
+    0%{
+      opacity: 0;
+    }
+    40%{
+       opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+ }
+.track-your-animation{
+    position: relative;
+    font-size: 48pt;
+    margin-top: 30vh;
+    margin-right: 15vw;
+    z-index: 1;
+    font-weight: bold;
+    animation:  1.5s  textAnimation;
+}
+@keyframes circleAnimation{
+    0%{
+        height: 100px;
+        width: 100px;
+    }
+    50%{
+        height: 27vw;
+        width: 27vw;
+    }
+    100%{
+        height: 25vw;
+        width: 25vw;
+    }
+ }
+.circle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+    position: absolute;
+    z-index: 0;
+    margin-top: 10vh;
+}
+.circle-animation{
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 50%;
+    position: absolute;
+    height: 25vw;
+    width: 25vw;
+    z-index: 0;
+    animation:  1.5s  circleAnimation;
+}
+.content-img-animation{
+    display:flex;
+    justify-content: center;
+    position: absolute;
+    width: 40vw;
+}
+.content-img-animation img{
+    width: 50vw;
+    margin-top: 15%;
+    position: relative;
+    animation: 2.5s  visableimg;
+}
+.subscriptions-animation{
+    font-size: 48pt;
+    margin-top: 50vh;
+    z-index:1;
+    font-weight: bold;
+    color: #74ebd5;
+}
+.home-page-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sub-mini-content{
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    margin-top:5vh;
+}

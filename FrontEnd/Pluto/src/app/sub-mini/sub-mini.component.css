@@ -1,0 +1,27 @@
+.sub-mini{
+    width: 10vw;
+    height: 19vh;
+    border-radius: 0.75rem;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    position: relative;
+    display: inline-block; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-mini img{
+    height: 30vh; 
+    transition: 1s; 
+    display: block;
+}
+.sub-mini:hover img{
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+.sub-mini div{
+    position: absolute;
+    font-size: 1.75rem;
+    color: #fff;
+    cursor: pointer;
+}

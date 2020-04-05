@@ -4,11 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+import { SubMiniComponent } from './sub-mini/sub-mini.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomePageComponent,
+    SignUpPageComponent,
+    SubMiniComponent
   ],
   imports: [
     BrowserModule,
