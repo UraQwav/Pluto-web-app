@@ -109,3 +109,89 @@
     width: 80vw;
     margin-top:5vh;
 }
+.subscriptions-price-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+}
+.subscription-price{
+    display: block;
+    width: 250px;
+    height: 310px;
+    border-radius: 10px;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    background: #fff;
+}
+.subscription-price div{
+    margin: 2rem;
+}
+.subscription-price .days{
+    font-size: 1.75rem;
+}
+.subscription-price .money{
+    font-size: 2.75rem;
+}
+.subscription-price .description{
+    color: #bdbdbd;
+}
+.subscription-price-star{
+    display: block;
+    width: 320px;
+    height: 380px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.subscription-price-title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85vw;
+    margin: 15vh;
+}
+.subscription-title{
+    font-size: 4rem;
+}
+.subscription-time{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 25px;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    background: #fff;
+}
+.subscription-time div{
+    width: 90px;
+    text-align: center;
+}
+.subscription-time-daily{
+    padding: 0.5rem;
+    border-radius: 20px;
+    background: #3d3d3d;
+    margin-right: 1rem;
+    color: #fff;
+}
+.subscription-price-star div{
+    margin: 2rem;
+}
+.subscription-price-star .days{
+    font-size: 1.75rem;
+}
+.subscription-price-star .money{
+    font-size: 2.75rem;
+}
+.subscription-price-star .description{
+    color: #fff;
+}
+.subscription-price-star .book-now{
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 2rem 4rem;
+    text-align: center;
+}
