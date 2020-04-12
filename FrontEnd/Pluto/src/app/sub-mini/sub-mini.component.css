@@ -1,6 +1,7 @@
 .sub-mini{
-    width: 10vw;
-    height: 19vh;
+    width: 105px;
+    height: 105px;
+    margin:10px 10px;
     border-radius: 0.75rem;
     box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
     position: relative;

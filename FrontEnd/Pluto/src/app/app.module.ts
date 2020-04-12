@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { SubMiniComponent } from './sub-mini/sub-mini.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SubMiniComponent } from './sub-mini/sub-mini.component';
     HeaderComponent,
     HomePageComponent,
     SignUpPageComponent,
-    SubMiniComponent
+    SubMiniComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

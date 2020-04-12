@@ -1,13 +1,15 @@
 <div class="home-page">
-    <div class="home-page-animation">
-        <div class="track-your-animation">track&nbsp;your</div>
-        <div class="circle">
+    <div class="animation">
+    <div [class.home-page-animation]="isLoad" [class.home-page-animation-hiden]="isNotLoad">
+        <div  class="track-your-animation">track&nbsp;your</div>
+        <div  class="circle">
             <div class="circle-animation"></div> 
         </div>
-        <div class="content-img-animation">
-                <img src="assets/mujik.png"/>
+        <div  class="content-img-animation">
+                <img src="assets/mujik2.png"/>
         </div>
-        <div class="subscriptions-animation">SUBSCRIPTIONS</div>
+        <div  class="subscriptions-animation">SUBSCRIPTIONS</div>
+    </div>
     </div>
     <div class="home-page-content">
         <div class="subscription-price-title">
@@ -40,6 +42,7 @@
                 <div class="description">Enjoy the full 2 months ofsubscription for full length. At no additional cost.</div>
             </div>
         </div>
+        <div class="Title">Popular Service&Subscriptons</div>
         <div class="sub-mini-content">
             <app-sub-mini></app-sub-mini>
             <app-sub-mini></app-sub-mini>
@@ -47,8 +50,6 @@
             <app-sub-mini></app-sub-mini>
             <app-sub-mini></app-sub-mini>
             <app-sub-mini></app-sub-mini>
-        </div>
-        <div class="sub-mini-content">
             <app-sub-mini></app-sub-mini>
             <app-sub-mini></app-sub-mini>
             <app-sub-mini></app-sub-mini>

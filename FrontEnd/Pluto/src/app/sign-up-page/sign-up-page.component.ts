@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class SignUpPageComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
+  
 }
