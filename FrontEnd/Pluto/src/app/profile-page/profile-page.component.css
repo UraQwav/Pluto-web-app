@@ -1,0 +1,108 @@
+.profile-page{
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.profile-page-small-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin: 0 40px;
+    /* position: fixed; */
+    /* background: #ECE9E6;  */
+}
+.profile-page-small-info-img{
+    padding: 2px;
+    width: 55px;
+    height: 55px;
+    margin-top: 5vh;
+    border-radius: 50%;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+}
+.profile-page-small-info-img img{
+    border-radius: 50%;
+}
+.profile-page-small-info-user-name-and-dob{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    margin-top:0.7rem;
+    margin-bottom: 0.5rem;
+}
+.profile-page-small-info-user-name-and-dob .dob{
+    font-size: 0.75rem;
+    color: #bbb;
+}
+.profile-page-small-info-user-subscribe-status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-top: 2px solid #ECE9E6;
+    border-bottom: 2px solid #ECE9E6;
+}
+.amout-paid, .amout-of-unpaid, .total{
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+}
+.amout-paid .quanity, .amout-of-unpaid .quanity, .total .quanity{
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    margin-bottom: 0;
+}
+.amout-paid .description, .amout-of-unpaid .description, .total .description{
+    text-align: center;
+    margin-top: 0;
+    font-size: 0.7rem;
+    color: #bbb
+}
+.navigation-bar-item a{
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+    align-items: center;
+    padding: 0.5rem;
+    width: 125px;
+}
+.navigation-bar-item a div{
+    margin:0.25rem;
+    margin-left: 1.5rem;
+}
+.profile-content{
+    padding-top:15vh;
+    display:flex;
+    justify-content: flex-start;
+}
+.profile-content-user-info{
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    margin:20px;
+}
+.provile-img{
+    width: 150px;
+    height: 175px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+}
+.provile-img img{
+    width: 150%;
+}
+.profile-content-user-subscriptions{
+    display:flex;
+    flex-direction: column;
+    margin:20px;
+}
+.subscriptions{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}

@@ -1,10 +1,12 @@
 .sign{
-    display: flex;
-    justify-content: space-between;
     /* align-items: center; */
     background: #ECE9E6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.sign-content{
+    display: flex;
+    justify-content: space-between;
 }
 .sign-description{
     display:block;
@@ -246,4 +248,32 @@
 .sign-content-forms{
     display:block;
     margin-right: 10vw;
+}
+@media only screen and (max-width: 600px) {
+    .sign-description{
+        display: none;
+    }
+    .sign-content{
+        justify-content: center;
+    }
+    .sign-in-content-form, .sign-up-content-form{
+        width: 250px;
+        margin: 15vh auto;
+    }
+    .sign-content-forms{
+        margin-right: 0;
+    }
+    .sign-up-content-form input[type="text"], .sign-up-content-form input[type="password"],  .sign-in-content-form input[type="text"], .sign-in-content-form input[type="password"]{
+        width: 180px
+    }
+    .sign-up-content-form input[type="text"]:focus, .sign-up-content-form input[type="password"]:focus, .sign-in-content-form input[type="text"]:focus, .sign-in-content-form input[type="password"]:focus{
+        width: 180px
+    }
+    .sign{
+    background: linear-gradient(#FFFFFF, #ECE9E6);
+    }
+    .sign-in-content-form-submit, .sign-up-content-form-title, .sign-up-content-form-date-of-birthday, .sign-up-content-form-gender, .sign-up-content-form-submit{
+        width: auto;
+    }
+    
 }

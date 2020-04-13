@@ -1,15 +1,15 @@
 <div class="home-page">
     <div class="animation">
-    <div [class.home-page-animation]="isLoad" [class.home-page-animation-hiden]="isNotLoad">
-        <div  class="track-your-animation">track&nbsp;your</div>
-        <div  class="circle">
-            <div class="circle-animation"></div> 
-        </div>
-        <div  class="content-img-animation">
+        <div [class.home-page-animation]="isLoad" [class.home-page-animation-hiden]="isNotLoad">
+            <div  class="track-your-animation">track&nbsp;your</div>
+            <div  class="circle">
+                <div class="circle-animation"></div> 
+            </div>
+            <div  class="content-img-animation">
                 <img src="assets/mujik2.png"/>
+            </div>
+            <div  class="subscriptions-animation">SUBSCRIPTIONS</div>
         </div>
-        <div  class="subscriptions-animation">SUBSCRIPTIONS</div>
-    </div>
     </div>
     <div class="home-page-content">
         <div class="subscription-price-title">
@@ -58,4 +58,5 @@
             <app-sub-mini></app-sub-mini>
         </div>
     </div>
+    <app-footer></app-footer>
 </div>

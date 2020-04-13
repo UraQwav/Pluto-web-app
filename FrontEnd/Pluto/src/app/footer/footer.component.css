@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: centre;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    border-top: 2px solid #ECE9E6;
+    padding: 1.5rem;
+}
+.footer-home, .footer-about, .footer-autor{
+    margin: 0 1.5rem;
+    color: #bbb;
+}
+.footer-home a, .footer-about a, .footer-autor a{
+    color: #bbb;
+}
+.footer-home a:hover, .footer-about a:hover, .footer-autor a:hover{
+    color: #74ebd5;
+}
