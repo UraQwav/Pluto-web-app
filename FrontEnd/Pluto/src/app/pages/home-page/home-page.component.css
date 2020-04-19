@@ -1,0 +1,26 @@
+.home-page{
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.home-page-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Title{
+    font-size:1.75rem;
+    margin:2rem;
+    margin-top:10vh;
+}
+@media only screen and (max-width: 800px) {
+    .home-page{
+        background: linear-gradient(#FFFFFF, #ECE9E6);
+    }
+    .Title{
+        font-size:1.75rem;
+        margin:2rem;
+        margin-top:10vh;
+    }
+}

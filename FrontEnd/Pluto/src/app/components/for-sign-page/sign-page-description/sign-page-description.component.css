@@ -1,0 +1,17 @@
+.sign-description{
+    display:block;
+    margin:5rem;
+}
+.description{
+    margin:2rem;
+    font-size: 1.75rem;
+    text-align: centre;
+}
+.description-img img{
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .sign-description{
+        display: none;
+    }
+}
