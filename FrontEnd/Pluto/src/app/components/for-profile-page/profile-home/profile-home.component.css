@@ -1,0 +1,13 @@
+.home-title{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.home-profile-subsriptions{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.more{
+    margin-left: 1rem;
+    cursor: pointer;
+}

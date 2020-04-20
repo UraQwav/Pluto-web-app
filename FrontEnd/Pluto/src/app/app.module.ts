@@ -15,6 +15,13 @@ import { SignUpFormComponent } from './components/for-sign-page/sign-up-form/sig
 import { SubscriptionsPraysComponent } from './components/for-home-page/subscriptions-prays/subscriptions-prays.component';
 import { ProfileMenuComponent } from './components/for-profile-page/profile-menu/profile-menu.component';
 import { ProfileSubscriptionComponent } from './components/for-profile-page/profile-subscription/profile-subscription.component';
+import { ProfileCardComponent } from './components/for-profile-page/profile-card/profile-card.component';
+import { ProfileHomeComponent } from './components/for-profile-page/profile-home/profile-home.component';
+import { ProfileNotificationsComponent } from './components/for-profile-page/profile-notifications/profile-notifications.component';
+import { ProfileSettingsComponent } from './components/for-profile-page/profile-settings/profile-settings.component';
+import { ProfileCalendarComponent } from './components/for-profile-page/profile-calendar/profile-calendar.component';
+import { ProfileSubscriptionsComponent } from './components/for-profile-page/profile-subscriptions/profile-subscriptions.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +37,13 @@ import { ProfileSubscriptionComponent } from './components/for-profile-page/prof
     SignUpFormComponent,
     SubscriptionsPraysComponent,
     ProfileMenuComponent,
-    ProfileSubscriptionComponent
+    ProfileSubscriptionComponent,
+    ProfileCardComponent,
+    ProfileHomeComponent,
+    ProfileNotificationsComponent,
+    ProfileSettingsComponent,
+    ProfileCalendarComponent,
+    ProfileSubscriptionsComponent
   ],
   imports: [
     BrowserModule,

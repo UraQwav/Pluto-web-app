@@ -1,0 +1,59 @@
+.profile-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.profile-card{
+    width: 255px;
+    height: 165px;
+    margin:10px 10px;
+    border-radius: 0.75rem;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    position: relative;
+    display: inline-block; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-card img{
+    height: 30vh; 
+    transition: 1s; 
+    display: block;
+}
+.profile-card:hover img{
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+.profile-card .text{
+    position: absolute;
+    font-size: 1.75rem;
+    color: #fff;
+    cursor: pointer;
+}
+.text{
+    display:flex;
+    flex-direction: column;
+}
+.card-name{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.card-info{
+    display:flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+.card-number-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.25rem;
+    margin-right: 4rem;
+}
+.add-card{
+    cursor: pointer;
+    text-align: center;
+    width: 5rem;
+    font-weight: 500;
+    font-size: 4rem;
+}
