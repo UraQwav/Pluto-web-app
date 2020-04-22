@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'sign', component: SignPageComponent },
   { path: 'my-profile', component: ProfilePageComponent, children: [ 
-    {path: '', component: ProfileHomeComponent} ,
+    {path: '', redirectTo: '/my-profile/home', pathMatch: 'full'} ,
     {path: 'home', component: ProfileHomeComponent},
     {path: 'subscriptions', component: ProfileSubscriptionsComponent},
     {path: 'notifications', component: ProfileNotificationsComponent},
