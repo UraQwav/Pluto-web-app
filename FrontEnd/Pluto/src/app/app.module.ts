@@ -21,7 +21,8 @@ import { ProfileNotificationsComponent } from './components/for-profile-page/pro
 import { ProfileSettingsComponent } from './components/for-profile-page/profile-settings/profile-settings.component';
 import { ProfileCalendarComponent } from './components/for-profile-page/profile-calendar/profile-calendar.component';
 import { ProfileSubscriptionsComponent } from './components/for-profile-page/profile-subscriptions/profile-subscriptions.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -47,7 +48,9 @@ import { ProfileSubscriptionsComponent } from './components/for-profile-page/pro
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
