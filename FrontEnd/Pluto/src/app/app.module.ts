@@ -22,7 +22,7 @@ import { ProfileSettingsComponent } from './components/for-profile-page/profile-
 import { ProfileCalendarComponent } from './components/for-profile-page/profile-calendar/profile-calendar.component';
 import { ProfileSubscriptionsComponent } from './components/for-profile-page/profile-subscriptions/profile-subscriptions.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -50,7 +50,8 @@ import { FormsModule } from '@angular/forms'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -27,6 +27,9 @@
     display: flex;
     align-items: center;
 }
+.sign-up-content-form-error {
+    border: 2px solid #DC134C !important;
+}
 .sign-up-content-form input[type="text"], .sign-up-content-form input[type="password"]{
     border: 0;
     background: none;
@@ -149,6 +152,7 @@
     width: 240px;
     display: flex;
     align-items: center;
+    visibility: visible  !important;
 }
 
 .sign-up-content-form-login-validation-ok{
