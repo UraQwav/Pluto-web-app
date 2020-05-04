@@ -9,12 +9,13 @@ providedIn:'root'
 })
 
 export class ServiceSignUp {
-    readonly URL = GlobalRootURL.BASE_API_URL + "user/registration"
+    readonly URL = GlobalRootURL.BASE_FAPI_URL + "user/sign-up"
     constructor(private http:HttpClient){
-
+        
     }
     
     signUpUser(body: FormArray): Observable<any>{
+        localStorage.setItem("user", JSON.stringify(body.getRawValue));
         return this.http.post(this.URL,body)
     }
 }

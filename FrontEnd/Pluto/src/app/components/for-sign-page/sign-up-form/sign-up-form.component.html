@@ -1,10 +1,10 @@
-<form [formGroup]="myForm" novalidate (ngSubmit)="signUp()" class="sign-up-content-form" action="My-profile" method="POST">
+<form [formGroup]="signUpForm" novalidate (ngSubmit)="signUp()" class="sign-up-content-form" action="My-profile" method="POST">
     <h3>First time on Pluto?</h3>
     <h5>Sign up on Pluto</h5>
-    <p class="sign-up-content-form-login-validation-ok" [class.sign-up-content-form-login-validation-error]="myForm.controls['userFirstName'].invalid  && myForm.controls['userFirstName'].touched">First name incorrectly entered</p>
-    <input type="text" [class.sign-up-content-form-error]="myForm.controls['userFirstName'].invalid  && myForm.controls['userFirstName'].touched"  formControlName="userFirstName"  max="100" required placeholder="Your first name">
-    <p class="sign-up-content-form-login-validation-ok"  [class.sign-up-content-form-login-validation-error]="myForm.controls['userLastName'].invalid  && myForm.controls['userLastName'].touched">Last name incorrectly entered</p>
-    <input type="text"  [class.sign-up-content-form-error]="myForm.controls['userLastName'].invalid  && myForm.controls['userLastName'].touched" formControlName="userLastName" max="100" required placeholder="Your last name">
+    <p class="sign-up-content-form-login-validation-ok" [class.sign-up-content-form-login-validation-error]="signUpForm.controls['firstName'].invalid  && signUpForm.controls['firstName'].touched">First name incorrectly entered</p>
+    <input type="text" [class.sign-up-content-form-error]="signUpForm.controls['firstName'].invalid  && signUpForm.controls['firstName'].touched"  formControlName="firstName"  max="100" required placeholder="Your first name">
+    <p class="sign-up-content-form-login-validation-ok"  [class.sign-up-content-form-login-validation-error]="signUpForm.controls['lastName'].invalid  && signUpForm.controls['lastName'].touched">Last name incorrectly entered</p>
+    <input type="text"  [class.sign-up-content-form-error]="signUpForm.controls['lastName'].invalid  && signUpForm.controls['lastName'].touched" formControlName="lastName" max="100" required placeholder="Your last name">
     <p class="sign-up-content-form-title">Birthday</p>
     <p class="sign-up-content-form-login-validation-ok"  [class.sign-up-content-form-login-validation-error]="eroorInInputDate" >Date of Birthday incorrectly entered</p>
     <div class="sign-up-content-form-date-of-birthday">
@@ -208,25 +208,25 @@
     <p class="sign-up-content-form-login-validation-ok"  [class.sign-up-content-form-login-validation-error]="errorInInputGender">Please select your gender</p>
     <div class="sign-up-content-form-gender">
         <div class="sign-up-content-form-gender-item">
-            <input type="radio" formControlName="userGender" name="userGender" max="100" required id="female" placeholder="Female" value="Female">
+            <input type="radio" formControlName="gender" name="userGender" max="100" required id="female" placeholder="Female" value="Female">
             <label for="female">Female</label>
         </div>
         <div class="sign-up-content-form-gender-item">
-            <input type="radio"  formControlName="userGender" name="userGender" id="male" max="100" required placeholder="Male" value="Male">
+            <input type="radio"  formControlName="gender" name="userGender" id="male" max="100" required placeholder="Male" value="Male">
             <label for="male">Male</label>
         </div>
     </div>
     <p class="sign-up-content-form-title">Create your Login&Password</p>
-    <p class="sign-up-content-form-login-validation-ok" [class.sign-up-content-form-login-validation-error]="myForm.controls['userPhone'].invalid && myForm.controls['userPhone'].touched">Error</p>
-    <input type="text" [class.sign-up-content-form-error]="myForm.controls['userPhone'].invalid  && myForm.controls['userPhone'].touched"  formControlName="userPhone"  placeholder="Phone" mask="+000 00 000-00-00" max="100" required>
-    <p class="sign-up-content-form-login-validation-ok" [class.sign-up-content-form-login-validation-error]="myForm.controls['userEmail'].invalid && myForm.controls['userEmail'].touched">Error</p>
-    <input type="text"  [class.sign-up-content-form-error]="myForm.controls['userEmail'].invalid  && myForm.controls['userEmail'].touched"  formControlName="userEmail"  placeholder="Email" max="100" required>
-    <p class="sign-up-content-form-login-validation-ok"  [class.sign-up-content-form-login-validation-error]="myForm.controls['userPassword'].invalid  && myForm.controls['userPassword'].touched">Password is too easy</p>
-    <input type="password" [class.sign-up-content-form-error]="myForm.controls['userPassword'].invalid  && myForm.controls['userPassword'].touched || eroorPasswordDontMatch"  formControlName="userPassword"  placeholder="Password" max="100" required>
+    <p class="sign-up-content-form-login-validation-ok" [class.sign-up-content-form-login-validation-error]="signUpForm.controls['phone'].invalid && signUpForm.controls['phone'].touched">Error</p>
+    <input type="text" [class.sign-up-content-form-error]="signUpForm.controls['phone'].invalid  && signUpForm.controls['phone'].touched"  formControlName="phone"  placeholder="Phone" mask="+000 00 000-00-00" max="100" required>
+    <p class="sign-up-content-form-login-validation-ok" [class.sign-up-content-form-login-validation-error]="signUpForm.controls['email'].invalid && signUpForm.controls['email'].touched">Error</p>
+    <input type="text"  [class.sign-up-content-form-error]="signUpForm.controls['email'].invalid  && signUpForm.controls['email'].touched"  formControlName="email"  placeholder="Email" max="100" required>
+    <p class="sign-up-content-form-login-validation-ok"  [class.sign-up-content-form-login-validation-error]="signUpForm.controls['password'].invalid  && signUpForm.controls['password'].touched">Password is too easy</p>
+    <input type="password" [class.sign-up-content-form-error]="signUpForm.controls['password'].invalid  && signUpForm.controls['password'].touched || eroorPasswordDontMatch"  formControlName="password"  placeholder="Password" max="100" required>
     <p class="sign-up-content-form-login-validation-ok" [class.sign-up-content-form-login-validation-error]="eroorPasswordDontMatch">passwords don't match</p>
     <input type="password" placeholder="Confirm password" [class.sign-up-content-form-error]="eroorPasswordDontMatch" [(ngModel)]="userConfirmPassword" [ngModelOptions]="{standalone: true}" max="100" required>
     <div class="sign-up-content-form-submit">
-        <input type="submit" [disabled]="myForm.invalid"  value="Sign up" name="Sign-up">
+        <input type="submit" [disabled]="signUpForm.invalid"  value="Sign up" name="Sign-up">
         <a href=""> </a>
     </div>
 </form>

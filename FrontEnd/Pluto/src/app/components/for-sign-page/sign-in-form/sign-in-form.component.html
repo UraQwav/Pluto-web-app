@@ -1,10 +1,10 @@
-<form class="sign-in-content-form">
+<form class="sign-in-content-form"  [formGroup]="signInForm" novalidate (ngSubmit)="signIn()">
     <p class="sign-in-content-form-login-validation-ok">Error</p>
-    <input [(ngModel)]="userName" [ngModelOptions]="{standalone: true}" type="text" max="100" required placeholder="Phone or email" >
+    <input formControlName="userEmail" type="text" max="100" required placeholder="Phone or email" >
     <p class="sign-in-content-form-login-validation-ok">Error</p>
-    <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" max="100" required placeholder="Password" >
+    <input formControlName="userPassword"  type="password" max="100" required placeholder="Password" >
     <div class="sign-in-content-form-submit">
-        <input type="submit" (click)="registred()" value="Sign in" name="Sign-in">
+        <input type="submit" [disabled]="signInForm.invalid" value="Sign in" name="Sign-in">
         <a href="">Forgot you password?</a>
     </div>
 </form>
