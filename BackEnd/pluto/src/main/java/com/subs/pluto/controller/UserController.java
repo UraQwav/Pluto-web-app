@@ -6,14 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@CrossOrigin(origins = "http://192.168.1.105:8081",maxAge = 10000)
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    @Autowired
+
     private final UserService userService;
 
-
+    @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }

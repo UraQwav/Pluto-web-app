@@ -30,7 +30,7 @@
 .sign-up-content-form-error {
     border: 2px solid #DC134C !important;
 }
-.sign-up-content-form input[type="text"], .sign-up-content-form input[type="password"]{
+.sign-up-content-form input[type="text"],.sign-up-content-form input[type="date"], .sign-up-content-form input[type="password"]{
     border: 0;
     background: none;
     display: block;
@@ -44,7 +44,7 @@
     transition: 0.25s;
 }
 
-.sign-up-content-form input[type="text"]:focus, .sign-up-content-form input[type="password"]:focus{
+.sign-up-content-form input[type="text"]:focus.sign-up-content-form input[type="date"]:focus, .sign-up-content-form input[type="password"]:focus{
     width: 280px;
     border-color: #74ebd5;
 }

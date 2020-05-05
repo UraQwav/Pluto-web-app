@@ -14,8 +14,8 @@ export class ServiceSignUp {
         
     }
     
-    signUpUser(body: FormArray): Observable<any>{
-        localStorage.setItem("user", JSON.stringify(body.getRawValue));
-        return this.http.post(this.URL,body)
+    signUpUser(body: FormGroup): Observable<any>{
+        
+        return this.http.post(this.URL,body.value)
     }
 }
