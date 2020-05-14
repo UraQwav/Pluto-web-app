@@ -9,13 +9,11 @@ providedIn:'root'
 })
 
 export class ServiceSignUp {
-    readonly URL = GlobalRootURL.BASE_FAPI_URL + "user/sign-up"
+    readonly URL = "/user/sign-up"
     constructor(private http:HttpClient){
-        
     }
     
     signUpUser(body: FormGroup): Observable<any>{
-        
         return this.http.post(this.URL,body.value)
     }
 }

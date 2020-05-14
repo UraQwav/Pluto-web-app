@@ -2,11 +2,12 @@ package com.subs.fapi.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
 public class ServicePriceAndRenewalTime {
-    private Long id;
+    private BigDecimal id;
 
     private String price;
 

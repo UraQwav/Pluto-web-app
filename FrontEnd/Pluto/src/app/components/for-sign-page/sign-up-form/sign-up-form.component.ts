@@ -4,6 +4,8 @@ import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { __values } from 'tslib';
 import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {User} from '../../../entity/user';
 @Component({
   selector: 'app-sign-up-form',
   templateUrl: './sign-up-form.component.html',
@@ -14,8 +16,8 @@ export class SignUpFormComponent implements OnInit {
   errorInInputGender: boolean=false;
   eroorPasswordDontMatch: boolean=false;
   signUpForm : FormGroup;
-
-  constructor(private serviceSignUp: ServiceSignUp, private router:Router) { 
+  user:User;
+  constructor(private serviceSignUp: ServiceSignUp, private router:Router, private http:HttpClient) { 
     this.signUpForm = new FormGroup({
       "password": new FormControl("", [Validators.required, Validators.minLength(8), Validators.maxLength(50), Validators.pattern('((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})')]),
       "lastName": new FormControl("", [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern('^[a-zA-Z]*$')]),
@@ -33,8 +35,14 @@ export class SignUpFormComponent implements OnInit {
   signUp(): void{  
     this.errorInInputGender=this.signUpForm.get("gender").value!="Male"&&this.signUpForm.get("gender").value!="Female"
     this.eroorPasswordDontMatch=this.signUpForm.get("password").value!=this.userConfirmPassword;
+    
     if(!this.errorInInputGender&&!this.eroorPasswordDontMatch){ 
-     this.serviceSignUp.signUpUser(this.signUpForm).subscribe((resp:Response) =>{})
+     this.serviceSignUp.signUpUser(this.signUpForm).subscribe((resp:Response) =>{
+      localStorage.setItem('user', JSON.stringify(resp));
+      this.user = JSON.parse(localStorage.getItem('user'));
+      this.router.navigate(['my-profile/home', this.user.id ]);
+     })
+
      console.log(this.signUpForm.value);
     }
     

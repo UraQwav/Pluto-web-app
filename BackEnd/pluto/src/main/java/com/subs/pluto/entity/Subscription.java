@@ -3,6 +3,7 @@ package com.subs.pluto.entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -11,7 +12,7 @@ public class Subscription {
     @Id
     @GeneratedValue
     @Column(name="subscription_id")
-    private Long id;
+    private BigDecimal id;
 
     @JsonFormat(pattern = "yyyy-mm-dd")
     @Temporal(TemporalType.DATE)

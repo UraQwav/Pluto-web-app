@@ -3,6 +3,7 @@ package com.subs.pluto.entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -11,7 +12,7 @@ public class UserCard {
     @Id
     @GeneratedValue
     @Column(name="user_card_id")
-    private Long id;
+    private BigDecimal id;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

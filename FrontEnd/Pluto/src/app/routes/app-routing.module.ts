@@ -8,18 +8,20 @@ import { ProfileHomeComponent } from '../components/for-profile-page/profile-hom
 import { ProfileNotificationsComponent } from '../components/for-profile-page/profile-notifications/profile-notifications.component';
 import { ProfileCalendarComponent } from '../components/for-profile-page/profile-calendar/profile-calendar.component';
 import { ProfileSettingsComponent } from '../components/for-profile-page/profile-settings/profile-settings.component';
+import { ProfileSubscriptionManagerComponent } from '../components/for-profile-page/profile-subscription-manager/profile-subscription-manager.component';
 
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'sign', component: SignPageComponent },
   { path: 'my-profile', component: ProfilePageComponent, children: [ 
-    {path: '', redirectTo: '/my-profile/home', pathMatch: 'full'} ,
-    {path: 'home', component: ProfileHomeComponent},
-    {path: 'subscriptions', component: ProfileSubscriptionsComponent},
-    {path: 'notifications', component: ProfileNotificationsComponent},
-    {path: 'calendar', component: ProfileCalendarComponent},
-    {path: 'settings', component: ProfileSettingsComponent}
+    {path: '', redirectTo: '/my-profile/home/', pathMatch: 'full'} ,
+    {path: 'home/:id', component: ProfileHomeComponent},
+    {path: 'subscriptions/:id/manager/:id', component: ProfileSubscriptionManagerComponent},
+    {path: 'subscriptions/:id', component: ProfileSubscriptionsComponent},
+    {path: 'notifications/:id', component: ProfileNotificationsComponent},
+    {path: 'calendar/:id', component: ProfileCalendarComponent},
+    {path: 'settings/:id', component: ProfileSettingsComponent}
   ]}
 ];
 

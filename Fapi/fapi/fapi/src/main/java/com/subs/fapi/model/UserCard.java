@@ -1,10 +1,11 @@
 package com.subs.fapi.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class UserCard {
 
-    private Long id;
+    private BigDecimal id;
 
     private User user;
 

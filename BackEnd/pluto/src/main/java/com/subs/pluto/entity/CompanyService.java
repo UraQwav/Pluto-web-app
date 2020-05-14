@@ -1,6 +1,7 @@
 package com.subs.pluto.entity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -9,7 +10,7 @@ public class CompanyService {
     @Id
     @GeneratedValue
     @Column(name="company_service_id")
-    private Long id;
+    private BigDecimal id;
 
     @ManyToOne
     @JoinColumn(name = "company_id")

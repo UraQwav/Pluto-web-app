@@ -1,9 +1,10 @@
 package com.subs.fapi.model;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class CompanyService {
-    private Long id;
+    private BigDecimal id;
 
     private Company company;
 

@@ -63,7 +63,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "Pluto:build"
-          },
+            },
           "configurations": {
             "production": {
               "browserTarget": "Pluto:build:production"

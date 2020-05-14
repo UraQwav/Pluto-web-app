@@ -2,13 +2,14 @@ package com.subs.fapi.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
 public class User {
 
     @JsonFormat(pattern = "")
-    private Long id;
+    private BigDecimal id;
 
     @JsonFormat(pattern = "")
     private String email;
@@ -37,12 +38,7 @@ public class User {
     @JsonFormat(pattern = "")
     private String imagePath = "http://localhost:8080";
 
+
     @JsonFormat(pattern = "")
     private UserType userType;
-
-    private List<Subscription> subscription;
-
-    private List<UserCard> usersCards;
-
-    private List<UserNotification> usersNotifications;
 }

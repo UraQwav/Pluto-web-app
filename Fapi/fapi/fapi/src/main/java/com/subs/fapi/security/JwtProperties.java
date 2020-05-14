@@ -1,4 +1,4 @@
-package com.subs.fapi.security;
-
-public class JwtProperties {
-}
+//package com.subs.fapi.security;
+//
+//public class JwtProperties {
+//}

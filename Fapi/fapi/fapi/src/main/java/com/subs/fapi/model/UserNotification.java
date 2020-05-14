@@ -1,7 +1,9 @@
 package com.subs.fapi.model;
 
+import java.math.BigDecimal;
+
 public class UserNotification {
-    private Long id;
+    private BigDecimal id;
 
     private User user;
 
