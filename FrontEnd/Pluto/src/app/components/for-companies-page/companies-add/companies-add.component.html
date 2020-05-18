@@ -1,0 +1,18 @@
+<form class="company-content-form"  [formGroup]="companyForm"  novalidate (ngSubmit)="AddCompany()" action="My-profile" method="GET">
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <input formControlName="name" type="text"  required placeholder="Your company name" >
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <input formControlName="legalAddress" type="text"  required placeholder="Your company legal address" >
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <input formControlName="webSite" type="text"  required placeholder="Your company website" >
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <input formControlName="email" type="text"  required placeholder="Your company email" >
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <textarea formControlName="info"  rows="10" cols="45" required placeholder="Information about your company" ></textarea>
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <input formControlName="imagePath" type="text"  required placeholder="Web path to image" >
+    <div class="company-content-form-submit">
+        <input type="submit" [disabled]="companyForm.invalid" value="Become a partner" name="company">
+        <a></a>
+    </div>
+</form>

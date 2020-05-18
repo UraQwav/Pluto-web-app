@@ -22,9 +22,9 @@ public class UserController {
     @ResponseBody User signUpUser(@RequestBody User user){
         return userService.saveUser(user);
     }
-    @GetMapping("/getByEmailAndPassword/{email}/{password}/signIn")
-    @ResponseBody User signInUser(@PathVariable String email,@PathVariable String password){
-        User savedUser = userService.signUser(email,password);
+    @PostMapping("/sign-in")
+    @ResponseBody User signInUser(@RequestBody User user){
+        User savedUser = userService.signUser(user);
         return  savedUser;
     }
 

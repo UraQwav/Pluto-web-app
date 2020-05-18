@@ -7,11 +7,13 @@
     </div>
     <div class="header-items-container">
         <div class="header-container-item"><a routerLink="sign">My&nbsp;sub</a></div>
-        <div class="header-container-item"><a routerLink="sign">Friends</a></div>
+        <div class="header-container-item"><a routerLink="partnership">Partnership</a></div>
         <div class="header-container-item-Star">Popular&nbsp;services&sub</div>
     </div>
     <div class="header-sign">
-        <div class="header-login"><a routerLink="sign">Sign&nbsp;in</a></div>
-        <!-- <div class="header-signIn">Sign&nbsp;in</div> -->
+        <div *ngIf="logOutCheck;else unset" class="header-login" ><a routerLink="sign">Sign&nbsp;in</a></div>
+        <ng-template #unset>
+            <div class="header-login"><a (click)="LogOut()" routerLink="sign">Log&nbsp;out</a></div>
+        </ng-template>
     </div>
 </div>

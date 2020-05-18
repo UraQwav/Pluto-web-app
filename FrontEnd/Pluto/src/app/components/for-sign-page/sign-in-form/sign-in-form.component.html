@@ -1,8 +1,8 @@
 <form class="sign-in-content-form"  [formGroup]="signInForm"  novalidate (ngSubmit)="signIn()" action="My-profile" method="GET">
     <p class="sign-in-content-form-login-validation-ok">Error</p>
-    <input formControlName="userEmail" type="text"  required placeholder="Email" >
+    <input formControlName="email" type="text"  required placeholder="Email" >
     <p class="sign-in-content-form-login-validation-ok">Error</p>
-    <input formControlName="userPassword"  type="password" required placeholder="Password" >
+    <input formControlName="password"  type="password" required placeholder="Password" >
     <div class="sign-in-content-form-submit">
         <input type="submit" [disabled]="signInForm.invalid" value="Sign in" name="Sign-in">
         <a href="">Forgot you password?</a>

@@ -9,12 +9,11 @@ providedIn:'root'
 })
 
 export class ServiceSignIn {
-    URL = "/user/getByEmailAndPassword/{email}/{password}/signIn"
+    URL = "/user/sign-in"
     constructor(private http:HttpClient){
     }
 
     signInUser(body: FormGroup): Observable<any>{
-        let params = new HttpParams().set("email",body.get("email").value).set("password",body.get("password").value);
-        return this.http.get(this.URL,{params: params});
+        return this.http.post(this.URL, body.value);
     }
 }

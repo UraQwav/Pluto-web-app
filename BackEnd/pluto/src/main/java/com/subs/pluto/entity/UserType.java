@@ -1,6 +1,9 @@
 package com.subs.pluto.entity;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -15,6 +18,9 @@ public class UserType {
     @Column(name="user_type")
     private String type;
 
+    @JsonIgnore
+    @OneToMany(mappedBy="userType")
+    private List<User> user;
 
     public UserType(){}
     public UserType(BigDecimal userTypeId){

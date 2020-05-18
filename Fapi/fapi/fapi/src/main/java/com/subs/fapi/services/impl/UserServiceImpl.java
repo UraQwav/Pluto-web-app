@@ -22,12 +22,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User saveUser(User user) {
+        user.setPassword(String.valueOf(user.getPassword().hashCode()));
         return this.restTemplate.postForObject(backendServerUrl + "user/sign-up", user, User.class);
     }
     @Override
-    public User signUser(String login, String password) {
-        String path = "user/getByEmailAndPassword/{email}/{password}/signIn";
-        return this.restTemplate.getForObject(backendServerUrl + path, User.class, login,password);
+    public User signUser(User user) {
+        user.setPassword(String.valueOf(user.getPassword().hashCode()));
+        return this.restTemplate.postForObject(backendServerUrl + "user/sign-in", user, User.class);
     }
 
 }

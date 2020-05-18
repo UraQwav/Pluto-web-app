@@ -1,6 +1,7 @@
 package com.subs.pluto.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -158,14 +159,17 @@ public class User {
     @JoinColumn(name = "user_type_id", columnDefinition = "number(19,0) default 1")
     private UserType userType;
 
-//    @OneToMany(mappedBy = "user")
-//    private List<Subscription> subscription;
-//
-//    @OneToMany(mappedBy = "user")
-//    private List<UserCard> usersCards;
-//
-//    @OneToMany(mappedBy = "user")
-//    private List<UserNotification> usersNotifications;
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+    private List<Subscription> subscription;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+    private List<UserCard> usersCards;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+   private List<UserNotification> usersNotifications;
 
 
     public void setUserType(UserType userType) {

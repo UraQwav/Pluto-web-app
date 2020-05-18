@@ -11,6 +11,4 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
     List<User> findAllBy();
-    @Query()
-    Optional<User> find(String login, String password);
 }

@@ -1,0 +1,26 @@
+.company{
+    /* align-items: center; */
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.company-content{
+    display: flex;
+    justify-content: space-between;
+}
+.company-content-forms{
+    display:block;
+    margin-top: 7vh;
+    margin-left: 10vw;
+}
+@media only screen and (max-width: 600px) {
+    .company{
+    background: linear-gradient(#FFFFFF, #ECE9E6);
+    }
+    .company-content{
+        justify-content: center;
+    }
+    .company-content-forms{
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,26 @@
+<form class="company-content-form"  [formGroup]="companyServiceForm"  novalidate (ngSubmit)="AddCompanyService()" action="My-profile" method="GET">
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <div formGroupName="company">
+    <select  formControlName="id"name="Price-and-Renewal-Time" value="0">
+        <option selected="Price-and-Renewal-Time" value="0">Your company name</option>
+        <option *ngFor="let item of company" value="{{item.id}}">{{item.name}}</option>
+    </select>
+    </div>
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <input formControlName="name" type="text"  required placeholder="Your service name" >
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <textarea formControlName="info"  rows="10" cols="45" required placeholder="Information about your Service" ></textarea>
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <input formControlName="imagePath" type="text"  required placeholder="Web path to image" >
+    <p class="company-content-form-login-validation-ok">Error</p>
+    <div formGroupName="servicePriceAndRenewalTime">
+    <select  formControlName="id" name="Price-and-Renewal-Time" value="0">
+        <option selected="Price-and-Renewal-Time" value="0">Price and Renewal Time</option>
+        <option *ngFor="let item of servicePriceAndRenewalTime" value="{{item.id}}">Price: {{item.price}}$, time to renewal: {{item.renewalTime}}</option>
+    </select>
+    </div>
+    <div class="company-content-form-submit">
+        <input type="submit" [disabled]="companyServiceForm.invalid" value="Become a partner" name="company">
+        <a></a>
+    </div>
+</form>

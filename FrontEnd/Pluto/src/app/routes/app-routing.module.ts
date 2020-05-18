@@ -9,11 +9,15 @@ import { ProfileNotificationsComponent } from '../components/for-profile-page/pr
 import { ProfileCalendarComponent } from '../components/for-profile-page/profile-calendar/profile-calendar.component';
 import { ProfileSettingsComponent } from '../components/for-profile-page/profile-settings/profile-settings.component';
 import { ProfileSubscriptionManagerComponent } from '../components/for-profile-page/profile-subscription-manager/profile-subscription-manager.component';
+import { CompanyPageComponent } from '../pages/company-page/company-page.component';
+import { CompanyServicePageComponent } from '../pages/company-service-page/company-service-page.component';
 
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'sign', component: SignPageComponent },
+  { path: 'partnership', component: CompanyPageComponent },
+  { path: 'partnership/create-service', component: CompanyServicePageComponent },
   { path: 'my-profile', component: ProfilePageComponent, children: [ 
     {path: '', redirectTo: '/my-profile/home/', pathMatch: 'full'} ,
     {path: 'home/:id', component: ProfileHomeComponent},

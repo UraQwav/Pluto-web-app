@@ -55,12 +55,16 @@
     align-items: center;
 }
 .header-login{
+    display:flex;
     margin-right: 2rem;
     cursor: pointer;
 }
 .header-signIn{
     margin-right: 2rem;
     cursor: pointer;
+}
+.header-login-none{
+    display:none;
 }
 @media only screen and (max-width: 600px) {
     .header-items-container{

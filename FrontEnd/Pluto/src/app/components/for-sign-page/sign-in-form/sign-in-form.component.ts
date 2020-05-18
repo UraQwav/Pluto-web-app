@@ -16,8 +16,8 @@ export class SignInFormComponent implements OnInit {
   user:User;
   constructor(private serviceSignIn: ServiceSignIn,private router:Router) { 
     this.signInForm = new FormGroup({
-      "userEmail": new FormControl(),
-      "userPassword": new FormControl()
+      "email": new FormControl(),
+      "password": new FormControl()
     });
   }
   ngOnInit(): void {
@@ -28,6 +28,7 @@ export class SignInFormComponent implements OnInit {
   }
   signIn(){
     this.serviceSignIn.signInUser(this.signInForm).subscribe((resp:Response) =>{
+      
       localStorage.setItem('user', JSON.stringify(resp));
       this.user = JSON.parse(localStorage.getItem('user'));
       this.router.navigate(['my-profile/home', this.user.id ]);

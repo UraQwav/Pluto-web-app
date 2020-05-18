@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Optional;
 
 
-@CrossOrigin(value = "https://localhost:8081")
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -30,9 +29,9 @@ public class UserController {
         user = userService.registrationUser(user);
         return user;
     }
-    @GetMapping("/getByEmailAndPassword/{email}/{password}/signIn")
-    User signInUser(@PathVariable String email,@PathVariable String password){
-        return userService.getUserByLoginAndPassword(email,password);
+    @PostMapping("/sign-in")
+    User signInUser(@RequestBody User user){
+        return userService.getUserByLoginAndPassword(user.getEmail(), user.getPassword());
     }
 
 }

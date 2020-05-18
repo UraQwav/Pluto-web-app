@@ -1,0 +1,123 @@
+.company-content-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 325px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    background: #fff;
+    margin:2rem;
+    margin-top:12.5vh;
+}
+.company-content-form input[type="text"], .company-content-form input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ECE9E6;
+    padding: 0.5rem;
+    width: 240px;
+    outline: none;
+    color: #3d3d3d;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+textarea{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ECE9E6;
+    padding: 0.5rem;
+    width: 240px;
+    outline: none;
+    color: #3d3d3d;
+    border-radius: 10px;
+    transition: 0.25s;
+    resize: none;
+}
+textarea:focus{
+    width: 280px;
+    border-color: #74ebd5;
+}
+
+.company-content-form input[type="password"]{
+    margin-bottom: 10px;
+}
+.company-content-form input[type="text"]:focus, .company-content-form input[type="password"]:focus{
+    width: 280px;
+    border-color: #74ebd5;
+}
+.company-content-form-submit{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 260px;   
+}
+.company-content-form-submit input[type="submit"]{
+    padding: 0.5rem 0.75rem;
+    /* background: #8EE196; */
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    text-align: center;
+}
+.company-content-form-submit a{
+    font-size: 0.7rem;
+    margin-left: 1rem;
+    color: #ACB6E5;
+}
+.company-content-form-login-validation-error{
+    height: 20px;
+    font-size: 0.7rem;
+    color: #dc134c;
+    width: 240px;
+    display: flex;
+    align-items: center;
+}
+.company-content-form-login-validation-ok{
+    visibility: hidden;
+}
+ select{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ECE9E6;
+    padding: 0.5rem;
+    width: 260px;
+    outline: none;
+    color: #aeaeae;
+    border-radius: 10px;
+    transition:0.25s;
+    appearance: none;
+    -webkit-appearance: none;
+}
+select:focus{
+    border-color: #74ebd5;
+    color: #3d3d3d;
+    width:280px;
+}
+@media only screen and (max-width: 600px) {
+    .company-content-form{
+        width: 250px;
+        margin: 15vh auto;
+    }
+    .company-content-form input[type="text"], .company-content-form input[type="password"], select{
+        width: 180px
+    }
+    .company-content-form input[type="text"]:focus, .company-content-form input[type="password"]:focus,select:focus{
+        width: 180px
+    }
+    .company-content-form-submit{
+        width: auto;
+    }   
+}

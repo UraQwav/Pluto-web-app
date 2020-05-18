@@ -23,7 +23,13 @@ import { ProfileCalendarComponent } from './components/for-profile-page/profile-
 import { ProfileSubscriptionsComponent } from './components/for-profile-page/profile-subscriptions/profile-subscriptions.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProfileSubscriptionManagerComponent } from './components/for-profile-page/profile-subscription-manager/profile-subscription-manager.component'
+import { ProfileSubscriptionManagerComponent } from './components/for-profile-page/profile-subscription-manager/profile-subscription-manager.component';
+import { CompaniesAddComponent } from './components/for-companies-page/companies-add/companies-add.component';
+import { CompaniesAddServicesComponent } from './components/for-companies-page/companies-add-services/companies-add-services.component';
+import { CompanyPageComponent } from './pages/company-page/company-page.component';
+import { CompanyPageDescriptionComponent } from './components/for-companies-page/company-page-description/company-page-description.component';
+import { CompanyServicePageDescriptionComponent } from './components/for-companies-page/company-service-page-description/company-service-page-description.component';
+import { CompanyServicePageComponent } from './pages/company-service-page/company-service-page.component'
 
 @NgModule({
   declarations: [
@@ -46,7 +52,13 @@ import { ProfileSubscriptionManagerComponent } from './components/for-profile-pa
     ProfileSettingsComponent,
     ProfileCalendarComponent,
     ProfileSubscriptionsComponent,
-    ProfileSubscriptionManagerComponent
+    ProfileSubscriptionManagerComponent,
+    CompaniesAddComponent,
+    CompaniesAddServicesComponent,
+    CompanyPageComponent,
+    CompanyPageDescriptionComponent,
+    CompanyServicePageDescriptionComponent,
+    CompanyServicePageComponent
   ],
   imports: [
     BrowserModule,

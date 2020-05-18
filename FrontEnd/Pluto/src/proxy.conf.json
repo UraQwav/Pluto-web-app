@@ -3,5 +3,20 @@
         "target": "http://localhost:8081",
         "secure": false,
         "logLevel": "debug"
+    },
+    "/company/*": {
+        "target": "http://localhost:8081",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/service-price-and-renewal-time/*": {
+        "target": "http://localhost:8081",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/company-service/*":{
+        "target": "http://localhost:8081",
+        "secure": false,
+        "logLevel": "debug"
     }
 }

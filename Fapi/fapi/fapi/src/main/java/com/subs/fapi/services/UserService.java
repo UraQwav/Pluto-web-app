@@ -4,7 +4,7 @@ import com.subs.fapi.model.User;
 import org.springframework.http.ResponseEntity;
 
 public interface UserService {
-    User signUser(String login, String password);
+    User signUser(User user);
     User saveUser(User user);
 }
 
