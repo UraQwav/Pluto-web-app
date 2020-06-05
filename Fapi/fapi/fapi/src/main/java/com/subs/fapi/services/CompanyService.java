@@ -5,4 +5,5 @@ import com.subs.fapi.model.Company;
 public interface CompanyService {
     Company add(Company company);  
     Company[] getall();
+    Company changeStatus(Company company);
 }

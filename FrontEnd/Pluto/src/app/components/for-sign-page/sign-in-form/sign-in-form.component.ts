@@ -31,7 +31,16 @@ export class SignInFormComponent implements OnInit {
       
       localStorage.setItem('user', JSON.stringify(resp));
       this.user = JSON.parse(localStorage.getItem('user'));
-      this.router.navigate(['my-profile/home', this.user.id ]);
+      
+      if(this.user.userType.id=='2'){
+        this.router.navigate(['/developer/vereficationC/', this.user.id]);
+      }
+      if(this.user.id!=null){
+        this.router.navigate(['my-profile/home', this.user.id ]);
+      }
+      else{
+        alert("User deleted! or not created!");
+       }
     })
   }
 }

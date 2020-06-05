@@ -1,19 +1,9 @@
 package com.subs.pluto.controller;
 
-import com.subs.pluto.entity.ServicePriceAndRenewalTime;
-import com.subs.pluto.entity.User;
-import com.subs.pluto.entity.UserType;
+import com.subs.pluto.entity.PlServicesPriceAndRenewalTime;
 import com.subs.pluto.services.ServicePriceAndRenwalTimeService;
-import com.subs.pluto.services.UserService;
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.math.BigDecimal;
-import java.util.List;
-import java.util.Optional;
 
 
 @RestController
@@ -26,7 +16,7 @@ public class ServicePriceAndRenewalTimeController {
         this.servicePriceAndRenewalTimeService = servicePriceAndRenewalTimeService;
     }
     @GetMapping("/getall")
-    public Iterable<ServicePriceAndRenewalTime> getAll(){
+    public Iterable<PlServicesPriceAndRenewalTime> getAll(){
         return servicePriceAndRenewalTimeService.getall();
     }
 }

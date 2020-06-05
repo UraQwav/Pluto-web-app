@@ -1,0 +1,12 @@
+<div class="profile-subsriptions">
+    <div *ngFor="let item of user" class="profile-img">
+        <a class="profile-img-button" routerLink="home">
+            <img src={{item.imagePath}} alt="">
+            <div class="profile-notifications-on-profile-image">A</div>
+        </a>
+        <div class="profile-name">{{item.firstName}}</div>
+        <div class="verBut" (click)="clDelete(item)">
+            Delete
+        </div>
+    </div>
+</div>

@@ -19,4 +19,10 @@
         "secure": false,
         "logLevel": "debug"
     }
+    ,
+    "/subscription/*":{
+        "target": "http://localhost:8081",
+        "secure": false,
+        "logLevel": "debug"
+    }
 }

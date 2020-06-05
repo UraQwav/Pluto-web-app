@@ -1,0 +1,17 @@
+<div class="company">
+    <div *ngFor="let item of company" class="profile-subsriptions">
+        <div  class="profile-subscription">
+            <a>
+                <img src={{item.imagePath}} alt="">
+            </a>
+            <!-- <div>Netflix</div> -->
+        </div>
+        <div class="info"> 
+            <div class="name">{{item.name}}</div>
+            <div class="inf">{{item.info}}</div>
+            <div *ngIf="item.verificationStatus==MYVAR" class="verBut" (click)="verificationChange(item)">
+                Confirm
+            </div>
+        </div>
+    </div>
+</div>

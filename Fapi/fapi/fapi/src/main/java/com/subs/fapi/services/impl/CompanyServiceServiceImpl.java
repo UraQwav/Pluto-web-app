@@ -1,5 +1,7 @@
 package com.subs.fapi.services.impl;
 
+import java.math.BigDecimal;
+
 import com.subs.fapi.model.CompanyService;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -23,5 +25,12 @@ public class CompanyServiceServiceImpl implements CompanyServiceService{
     public CompanyService add(CompanyService companyService) {
         return this.restTemplate.postForObject(backendServerUrl + "company-service/add", companyService, CompanyService.class);
     }
-
+    @Override
+    public CompanyService[] getall() {
+        return this.restTemplate.getForObject(backendServerUrl + "/company-service/getall", CompanyService[].class);
+    }
+    @Override
+    public CompanyService getById(String id){
+        return this.restTemplate.getForObject(backendServerUrl + "/company-service/getById/"+id, CompanyService.class);
+    }
 }

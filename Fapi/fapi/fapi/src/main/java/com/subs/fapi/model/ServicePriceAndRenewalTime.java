@@ -15,7 +15,7 @@ public class ServicePriceAndRenewalTime {
     private String price;
 
     @JsonFormat(pattern = "")
-    private Date renewalTime;
+    private String renewalTime;
 
     @JsonIgnore
     private List<CompanyService> companyServices;

@@ -1,9 +1,8 @@
 package com.subs.pluto.services;
-import java.math.BigDecimal;
 
-import com.subs.pluto.entity.Company;
+import com.subs.pluto.entity.PlCompanies;
 
 public interface CompanyService {
-    Company add(Company company);
-    Iterable<Company> getall();
+    PlCompanies add(PlCompanies PLCompanies);
+    Iterable<PlCompanies> getall();
 }

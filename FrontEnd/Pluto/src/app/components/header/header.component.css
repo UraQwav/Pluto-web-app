@@ -49,6 +49,9 @@
     color: #fff;
     cursor: pointer;
 }
+.header-container-item-Star a{
+    color: #fff;
+}
 .header-sign{
     display: flex;
     justify-content: flex-start;

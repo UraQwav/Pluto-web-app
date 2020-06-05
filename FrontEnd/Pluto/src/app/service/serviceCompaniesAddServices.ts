@@ -10,10 +10,14 @@ providedIn:'root'
 
 export class ServiceCompaniesAddServices {
     URL = "/company-service/add/"
+    URLGet = "/company-service/getById/"
     constructor(private http:HttpClient){
     }
 
     AddService(body: FormGroup): Observable<any>{
         return this.http.post(this.URL, body.value);
+    }
+    GetCompany(id:any): Observable<any>{
+        return this.http.get(this.URLGet+id);
     }
 }

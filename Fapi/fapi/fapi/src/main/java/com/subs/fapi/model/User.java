@@ -36,7 +36,7 @@ public class User {
     private Date registrationDate;
 
     @JsonFormat(pattern = "")
-    private String imagePath = "http://localhost:8080";
+    private String imagePath = "http://localhost:4200/assets/images/profile-img2.jpg";
 
 
     @JsonFormat(pattern = "")

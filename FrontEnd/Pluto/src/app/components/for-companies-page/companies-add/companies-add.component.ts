@@ -26,6 +26,7 @@ export class CompaniesAddComponent implements OnInit {
 
   AddCompany(){
     this.serviceCompaniesAdd.AddCompany(this.companyForm).subscribe((resp:Response) =>{
+      alert("Added ok");
     })
   }
 }

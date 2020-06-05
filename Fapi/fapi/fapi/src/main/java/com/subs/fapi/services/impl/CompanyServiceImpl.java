@@ -26,6 +26,10 @@ public class CompanyServiceImpl implements CompanyService{
     }
 
     @Override
+    public Company changeStatus(Company company) {
+        return this.restTemplate.postForObject(backendServerUrl + "company/status", company, Company.class);
+    }
+    @Override
     public Company[] getall() {
         return this.restTemplate.getForObject(backendServerUrl + "/company/getall", Company[].class);
     }

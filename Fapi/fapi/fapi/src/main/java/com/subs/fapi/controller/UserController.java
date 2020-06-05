@@ -22,10 +22,20 @@ public class UserController {
     @ResponseBody User signUpUser(@RequestBody User user){
         return userService.saveUser(user);
     }
-    @PostMapping("/sign-in")
+    @PostMapping("/sign-in") 
     @ResponseBody User signInUser(@RequestBody User user){
         User savedUser = userService.signUser(user);
         return  savedUser;
+    }
+    @PostMapping("/delete")
+    @ResponseBody User sidleter(@RequestBody User user){
+        User savedUser = userService.delete(user);
+        return  savedUser;
+    }
+    
+    @GetMapping("/getall")
+    public @ResponseBody User[] getAll() {
+        return userService.getall();
     }
 
 

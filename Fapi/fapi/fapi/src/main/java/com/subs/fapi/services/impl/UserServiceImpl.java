@@ -30,5 +30,13 @@ public class UserServiceImpl implements UserService {
         user.setPassword(String.valueOf(user.getPassword().hashCode()));
         return this.restTemplate.postForObject(backendServerUrl + "user/sign-in", user, User.class);
     }
-
+    @Override
+    public User[] getall() {
+        return this.restTemplate.getForObject(backendServerUrl + "/user/getallusers", User[].class);
+    }
+    @Override
+    public User delete(User user)
+    {
+        return this.restTemplate.postForObject(backendServerUrl + "user/delete", user, User.class);
+    }
 }

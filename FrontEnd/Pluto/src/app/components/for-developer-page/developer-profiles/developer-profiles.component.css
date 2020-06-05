@@ -1,0 +1,126 @@
+.profile-subsriptions{
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile-subscription{
+    width: 155px;
+    height: 155px;
+    margin:10px 10px;
+    border-radius: 0.75rem;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    position: relative;
+    display: inline-block; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-subscription img{
+    height: 30vh; 
+    transition: 1s; 
+    display: block;
+}
+.profile-subscription:hover img{
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+.profile-subscription div{
+    position: absolute;
+    font-size: 1.75rem;
+    color: #fff;
+    cursor: pointer;
+}
+.profile-menu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+}
+.profile-img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile-img-button{
+    display: block;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    margin:2rem;
+}
+
+.verBut{
+    padding: 0.5rem;
+    /* background: #8EE196; */
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin:1rem;
+}
+.profile-img-button img{
+    width: 110%;
+}
+.profile-name{
+    margin-top: 1rem;
+}
+.profile-notifications-on-profile-image{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    color: #fff;
+    background: #ACB6E5;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 55px;
+    top: 25%;
+    border-radius: 50%;
+}
+.menu-bar-of-navigation{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 45px 30px;
+    font-size: 0.8rem;
+}
+.menu-bar-item{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.2rem 0;
+}
+.menu-bar-item svg{
+    width: 25px;
+    margin-right: 1rem;
+    fill: #000;
+}
+.menu-bar-item-select{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.2rem 0;
+    color: #24A5F1;
+}
+.menu-bar-item-select svg{
+    width: 25px;
+    margin-right: 1rem;
+    fill: #24A5F1;
+}
+.menu-bar-item img{
+    width: 100px;
+    margin-right: 1.5rem;
+}
+.select-indecator{
+    background: #24A5F1;
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    left:0%;
+}

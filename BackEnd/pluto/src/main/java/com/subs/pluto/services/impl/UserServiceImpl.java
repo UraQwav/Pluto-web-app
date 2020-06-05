@@ -1,14 +1,10 @@
 package com.subs.pluto.services.impl;
 
-import com.subs.pluto.entity.User;
-import com.subs.pluto.entity.UserType;
+import com.subs.pluto.entity.PlUsers;
+import com.subs.pluto.entity.PlUsersType;
 import com.subs.pluto.repository.UserRepository;
 import com.subs.pluto.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Primary;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -90,14 +86,14 @@ public class UserServiceImpl implements UserService {
             "END;";
     @Override
 
-    public User registrationUser(User user) {
-        userRepository.save(user);
-        return user;
+    public PlUsers registrationUser(PlUsers plUsers) {
+        userRepository.save(plUsers);
+        return plUsers;
     }
 
     @Override
-    public User getUserByLoginAndPassword(String userLogin, String userPassword) {
-        User user = new User();
+    public PlUsers getUserByLoginAndPassword(String userLogin, String userPassword) {
+        PlUsers plUsers = new PlUsers();
         jdbcTemplate.execute(SQL_STORED_PROC_REF);
         SqlParameterSource paramaters = new MapSqlParameterSource()
                 .addValue("PARAM_USER_LOGIN", userLogin)
@@ -108,23 +104,23 @@ public class UserServiceImpl implements UserService {
             Map out = simpleJdbcCall.execute(paramaters);
 
             if (out != null) {
-                user.setId((BigDecimal) out.get("PARAM_USER_ID"));
-                user.setUserType(new UserType((BigDecimal) out.get("PARAM_USER_TYPE_ID")));
-                user.setDateOfBirthday((Date) out.get("PARAM_USER_DATE_OF_BIRTHDAY"));
-                user.setEmail((String) out.get("PARAM_USER_EMAIL2"));
-                user.setFirstName((String) out.get("PARAM_USER_FIRST_NAME"));
-                user.setGender((String) out.get("PARAM_USER_GENDER"));
-                user.setLastName((String) out.get("PARAM_USER_LAST_NAME"));
-                user.setPassword((String) out.get("PARAM_USER_PASSWORD2"));
-                user.setPhone((String) out.get("PARAM_USER_PHONE"));
-                user.setRegistrationDate((Date) out.get("PARAM_USER_REGISTRATION_DATE"));
+                plUsers.setId((BigDecimal) out.get("PARAM_USER_ID"));
+                plUsers.setPlUsersType(new PlUsersType((BigDecimal) out.get("PARAM_USER_TYPE_ID")));
+                plUsers.setDateOfBirthday((Date) out.get("PARAM_USER_DATE_OF_BIRTHDAY"));
+                plUsers.setEmail((String) out.get("PARAM_USER_EMAIL2"));
+                plUsers.setFirstName((String) out.get("PARAM_USER_FIRST_NAME"));
+                plUsers.setGender((String) out.get("PARAM_USER_GENDER"));
+                plUsers.setLastName((String) out.get("PARAM_USER_LAST_NAME"));
+                plUsers.setPassword((String) out.get("PARAM_USER_PASSWORD2"));
+                plUsers.setPhone((String) out.get("PARAM_USER_PHONE"));
+                plUsers.setRegistrationDate((Date) out.get("PARAM_USER_REGISTRATION_DATE"));
             }
 
         } catch (Exception e) {
             // ORA-01403: no data found, or any java.sql.SQLException
             System.err.println(e.getMessage());
         }
-        return user;
+        return plUsers;
     }
 
 

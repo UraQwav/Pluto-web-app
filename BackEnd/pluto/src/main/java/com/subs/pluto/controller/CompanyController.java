@@ -1,15 +1,8 @@
 package com.subs.pluto.controller;
-import com.subs.pluto.entity.Company;
+import com.subs.pluto.entity.PlCompanies;
 import com.subs.pluto.services.CompanyService;
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.math.BigDecimal;
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/company")
@@ -22,13 +15,13 @@ public class CompanyController {
         this.companyService = companyService;
     }
     @PostMapping("/add")
-    Company addCompany(@RequestBody Company company){
-        company = companyService.add(company);
-        return company;
+    PlCompanies addCompany(@RequestBody PlCompanies PLCompanies){
+        PLCompanies = companyService.add(PLCompanies);
+        return PLCompanies;
     }
     @GetMapping("/getall")
-    public Iterable<Company> getAll(){
+    public Iterable<PlCompanies> getAll(){
         return companyService.getall();
     }
-
+   
 }

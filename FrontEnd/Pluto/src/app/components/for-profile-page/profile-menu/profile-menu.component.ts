@@ -18,5 +18,4 @@ export class ProfileMenuComponent implements OnInit {
       this.router.navigate(['sign']);
     }
   }
-
 }

@@ -1,0 +1,26 @@
+.popular-subs{
+    /* align-items: center; */
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.popular-subs-content{
+    padding: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+.popular-subs-content-forms{
+    display:block;
+    margin-right: 10vw;
+}
+@media only screen and (max-width: 600px) {
+    .popular-subs{
+    background: linear-gradient(#FFFFFF, #ECE9E6);
+    }
+    .popular-subs-content{
+        justify-content: center;
+    }
+    .popular-subs-content-forms{
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,62 @@
+.profile-subsriptions{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: #e3e3e3 2px solid;
+}
+.profile-subscription{
+    width: 155px;
+    height: 155px;
+    margin:10px 10px;
+    border-radius: 0.75rem;
+    box-shadow: 0rem 0rem 2rem 0.35rem rgba(201,194,194,1);
+    position: relative;
+    display: inline-block; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-subscription img{
+    height: 30vh; 
+    transition: 1s; 
+    display: block;
+}
+.profile-subscription:hover img{
+    transform: scale(1.2); 
+    cursor: pointer;
+}
+.profile-subscription div{
+    position: absolute;
+    font-size: 1.75rem;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;   
+}
+.inf{
+    margin: 1rem;
+    width: 80%;  
+}
+.name{
+    margin:1rem;
+    font-size: 1.3rem;
+}
+.verBut{
+    padding: 0.5rem;
+    /* background: #8EE196; */
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin:1rem;
+    margin-left: 70%;
+}

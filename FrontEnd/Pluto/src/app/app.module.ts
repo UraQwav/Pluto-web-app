@@ -29,7 +29,19 @@ import { CompaniesAddServicesComponent } from './components/for-companies-page/c
 import { CompanyPageComponent } from './pages/company-page/company-page.component';
 import { CompanyPageDescriptionComponent } from './components/for-companies-page/company-page-description/company-page-description.component';
 import { CompanyServicePageDescriptionComponent } from './components/for-companies-page/company-service-page-description/company-service-page-description.component';
-import { CompanyServicePageComponent } from './pages/company-service-page/company-service-page.component'
+import { CompanyServicePageComponent } from './pages/company-service-page/company-service-page.component';
+import { PopularSubsPageComponent } from './pages/popular-subs-page/popular-subs-page.component';
+import { PopularSubsComponent } from './components/for-popular-page/popular-subs/popular-subs.component';
+import { PopularSubMoreComponent } from './components/for-popular-page/popular-sub-more/popular-sub-more.component';
+import { AdminPageUsersComponent } from './pages/admin-page-users/admin-page-users.component';
+import { DeveloperPageComponent } from './pages/developer-page/developer-page.component';
+import { DeveloperMenuComponent } from './components/for-developer-page/developer-menu/developer-menu.component';
+import { DeveloperProfilesComponent } from './components/for-developer-page/developer-profiles/developer-profiles.component';
+import { DeveloperCompaniComponent } from './components/for-developer-page/developer-compani/developer-compani.component';
+import { DeveloperSubsComponent } from './components/for-developer-page/developer-subs/developer-subs.component';
+import { DeveloperPageUserComponent } from './pages/developer-page-user/developer-page-user.component';
+import { DeveloperPageCComponent } from './pages/developer-page-c/developer-page-c.component';
+import { DeveloperPageSComponent } from './pages/developer-page-s/developer-page-s.component'
 
 @NgModule({
   declarations: [
@@ -58,7 +70,19 @@ import { CompanyServicePageComponent } from './pages/company-service-page/compan
     CompanyPageComponent,
     CompanyPageDescriptionComponent,
     CompanyServicePageDescriptionComponent,
-    CompanyServicePageComponent
+    CompanyServicePageComponent,
+    PopularSubsPageComponent,
+    PopularSubsComponent,
+    PopularSubMoreComponent,
+    AdminPageUsersComponent,
+    DeveloperPageComponent,
+    DeveloperMenuComponent,
+    DeveloperProfilesComponent,
+    DeveloperCompaniComponent,
+    DeveloperSubsComponent,
+    DeveloperPageUserComponent,
+    DeveloperPageCComponent,
+    DeveloperPageSComponent
   ],
   imports: [
     BrowserModule,

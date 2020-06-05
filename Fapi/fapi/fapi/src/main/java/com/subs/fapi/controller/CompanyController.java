@@ -26,6 +26,12 @@ public class CompanyController {
     @ResponseBody Company addCompany(@RequestBody Company company){
         return companyService.add(company);
     }
+    
+    @PostMapping("/status")
+    @ResponseBody Company changeStatus(@RequestBody Company company){
+        return companyService.changeStatus(company);
+    }
+
 
     @GetMapping("/getall")
     public @ResponseBody Company[] getAll() {
